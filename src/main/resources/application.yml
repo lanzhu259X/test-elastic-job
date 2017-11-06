@@ -2,7 +2,7 @@ server:
   port: 9001
 
 regCenter:
-  serverList: 10.214.168.174:2181
+  serverList: 127.0.0.1:2181
   namespace: zk_test_elastic
 
 live:
@@ -21,8 +21,8 @@ live:
 
 spring:
   datasource:
-    url: jdbc:mysql://10.213.57.214:3306/xxl_job_test?useUnicode=true&characterEncoding=UTF-8&verifyServerCertificate=false&useSSL=false&requireSSL=false
+    url: jdbc:mysql://127.0.0.1:3306/test_db?useUnicode=true&characterEncoding=UTF-8&verifyServerCertificate=false&useSSL=false&requireSSL=false
     driver-class-name: com.mysql.jdbc.Driver
-    username: wealth_rw
-    password: wealth_rw
+    username: root
+    password: root
 
