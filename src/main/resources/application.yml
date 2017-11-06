@@ -1,0 +1,28 @@
+server:
+  port: 9001
+
+regCenter:
+  serverList: 10.214.168.174:2181
+  namespace: zk_test_elastic
+
+live:
+  simpletest:
+    cron: 0 0/1 9-17 * * ?
+    shardingTotalCount: 1
+    shardingItemParameters: 0=cd
+  simplefail:
+    cron: 0 0/1 9-17 * * ?
+    shardingTotalCount: 2
+    shardingItemParameters: 0=cd,1=ls
+  dataflow:
+    cron: 0 0/2 9-17 * * ?
+    shardingTotalCount: 3
+    shardingItemParameters: 0=SH,1=BJ,2=GZ
+
+spring:
+  datasource:
+    url: jdbc:mysql://10.213.57.214:3306/xxl_job_test?useUnicode=true&characterEncoding=UTF-8&verifyServerCertificate=false&useSSL=false&requireSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+    username: wealth_rw
+    password: wealth_rw
+
